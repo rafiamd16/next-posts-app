@@ -9,7 +9,6 @@ const GoodPosts = async () => {
     cache: "no-store",
   });
   const goodPostList = res.data.reverse();
-  console.log(BASE_API_URL);
 
   return (
     <>

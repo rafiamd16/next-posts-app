@@ -1,6 +1,5 @@
 "use client";
 
-import { BASE_API_URL } from "@/lib/constansts";
 import { validateMessage, validateName } from "@/lib/validation";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -34,7 +33,7 @@ const CreateBadForm = () => {
 
     try {
       await axios.post(
-        `${BASE_API_URL}/api/badpost`,
+        "/api/badpost",
         { name, message },
         {
           headers: {
