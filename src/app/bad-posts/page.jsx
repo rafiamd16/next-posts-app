@@ -1,15 +1,13 @@
 import BadPostList from "@/components/BadPost";
+import { BASE_API_URL } from "@/lib/constansts";
 import axios from "axios";
 import Link from "next/link";
 import { IoAddOutline } from "react-icons/io5";
 
 const BadPosts = async () => {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/badpost`,
-    {
-      cache: "no-store",
-    }
-  );
+  const res = await axios.get(`${BASE_API_URL}/api/badpost`, {
+    cache: "no-store",
+  });
   const badPostList = res.data.reverse();
 
   return (
