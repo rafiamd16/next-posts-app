@@ -1,4 +1,5 @@
 import { updateBadPost } from "@/lib/data";
+import { NextResponse } from "next/server";
 
 export async function PUT(req, { params }) {
   try {
@@ -7,7 +8,7 @@ export async function PUT(req, { params }) {
     const data = await req.json();
 
     if (!id)
-      return Response.json(
+      return NextResponse.json(
         "ID is required",
         { status: 400 },
         { isUpdated: false }
@@ -15,7 +16,7 @@ export async function PUT(req, { params }) {
 
     const updatedBadPost = await updateBadPost(id, data);
     if (!updatedBadPost)
-      return Response.json(
+      return NextResponse.json(
         "Post not found",
         { status: 404 },
         { isUpdated: false }
@@ -24,7 +25,7 @@ export async function PUT(req, { params }) {
     return Response.json(updatedBadPost, { status: 200 }, { isUpdated: true });
   } catch (error) {
     console.error("Error to update bad post", error);
-    return Response.json(
+    return NextResponse.json(
       "Failed to update bad post",
       { status: 400 },
       { isUpdated: false }
