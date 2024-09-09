@@ -1,14 +1,13 @@
 import BadPostList from "@/components/BadPost";
 import { BASE_API_URL } from "@/lib/constansts";
-import axios from "axios";
 import Link from "next/link";
 import { IoAddOutline } from "react-icons/io5";
 
 const BadPosts = async () => {
-  const res = await axios.get(`${BASE_API_URL}/api/badpost`, {
+  const res = await fetch(`${BASE_API_URL}/api/badpost`, {
     cache: "no-store",
   });
-  const badPostList = res.data.reverse();
+  const badPostList = await res.json();
 
   return (
     <>
@@ -27,7 +26,7 @@ const BadPosts = async () => {
                 Create Post
               </Link>
             </div>
-            <BadPostList badPostList={badPostList} />
+            <BadPostList badPostList={badPostList.reverse()} />
           </div>
         </div>
       </section>

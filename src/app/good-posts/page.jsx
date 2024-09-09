@@ -1,14 +1,13 @@
 import GoodPostList from "@/components/GoodPost";
 import { BASE_API_URL } from "@/lib/constansts";
-import axios from "axios";
 import Link from "next/link";
 import { IoAddOutline } from "react-icons/io5";
 
 const GoodPosts = async () => {
-  const res = await axios.get(`${BASE_API_URL}/api/goodpost`, {
+  const res = await fetch(`${BASE_API_URL}/api/goodpost`, {
     cache: "no-store",
   });
-  const goodPostList = res.data.reverse();
+  const goodPostList = await res.json();
 
   return (
     <>
@@ -34,7 +33,7 @@ const GoodPosts = async () => {
                 Other Site
               </Link>
             </div>
-            <GoodPostList goodPostList={goodPostList} />
+            <GoodPostList goodPostList={goodPostList.reverse()} />
           </div>
         </div>
       </section>
