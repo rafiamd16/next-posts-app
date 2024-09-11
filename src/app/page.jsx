@@ -5,9 +5,9 @@ const Home = () => {
     <section className="flex justify-center items-center min-h-screen">
       <div className="container">
         <div className="px-4">
-          <div className="bg-white mx-auto border shadow-2xl w-[250px] h-[150px] p-7 rounded-lg">
+          <div className="bg-white mx-auto border shadow-2xl w-[270px] h-[220px] p-7 rounded-lg">
             <h1 className="text-2xl font-bold text-center mb-4">
-              Do You Like Me?
+              Of course i like you, but do you like me?
             </h1>
             <div className="flex items-center justify-center gap-5 transition-all">
               <Link
