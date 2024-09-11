@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="container">
         <div className="relative flex justify-between items-center">
           <Link href={"/"} className="text-lg font-bold text-white py-6 px-4">
-            WhatIsTheEnd?
+            Posts App
           </Link>
 
           <div className="flex items-center px-4">
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <li className="group flex">
                   <Link
                     className={`py-2 mx-auto flex text-base text-white font-medium group-hover:text-blue-600 transition-all navigasi lg:mx-5 ${
-                      pathname === "/good-posts" ? "active" : "hidden"
+                      pathname === "/good-posts" ? "active" : ""
                     }`}
                     href={"/good-posts"}
                   >
@@ -51,7 +51,7 @@ const Navbar = () => {
                 <li className="group flex">
                   <Link
                     className={`py-2 mx-auto flex text-base text-white font-medium group-hover:text-blue-600 transition-all navigasi lg:mx-5 ${
-                      pathname === "/bad-posts" ? "active" : "hidden"
+                      pathname === "/bad-posts" ? "active" : ""
                     }`}
                     href={"/bad-posts"}
                   >

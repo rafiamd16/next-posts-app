@@ -1,6 +1,4 @@
 import { formatDate } from "@/lib/utils";
-import Link from "next/link";
-import { IoPencil } from "react-icons/io5";
 
 const GoodPostList = ({ goodPostList }) => {
   return (
@@ -16,12 +14,6 @@ const GoodPostList = ({ goodPostList }) => {
             <p className="text-[10px] text-gray-700 text-right">
               {formatDate(post.createdAt)}
             </p>
-            <Link
-              href={`/good-posts/edit/${post.id}`}
-              className="absolute top-3 right-3 p-1 border hover:bg-gray-200"
-            >
-              <IoPencil size={20} />
-            </Link>
           </div>
         );
       })}

@@ -77,14 +77,14 @@ const CreateGoodForm = () => {
         </div>
         <div className="mb-4">
           <label htmlFor="message" className="block mb-1">
-            Pesan
+            Quote
           </label>
           <textarea
             onChange={(e) => setMessage(e.target.value)}
             onBlur={() => setMessageError(validateMessage(message))}
             id="message"
             name="message"
-            placeholder="Tuliskan pesan"
+            placeholder="quote"
             className={`outline-none shadow-md text-sm text-gray-700 py-2 h-[120px] px-4 w-full focus:ring-2 focus:ring-offset-1 focus:ring-blue-700 focus:border-blue-700 transition-all duration-300 ease-in-out rounded ${
               messageError ? "border-red-500" : ""
             }`}
