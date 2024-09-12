@@ -9,7 +9,7 @@ const Footer = () => {
             <span className="text-sky-500 font-bold">Next.js</span>
           </p>
           <p className="text-white text-[10px] sm:text-xs">
-            © 2024 Good or Bad End. All rights reserved.
+            © 2024 Post App. All rights reserved.
           </p>
         </div>
       </div>
